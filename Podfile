@@ -3,14 +3,14 @@ use_frameworks!
 
 target 'topmovies' do
 
-    # RX
-    pod 'RxSwift'
-    pod 'RxCocoa'
-    pod 'RxAlamofire'
-
-    # Others
-    pod 'Alamofire'
-    pod 'ObjectMapper'
+#    # RX
+#    pod 'RxSwift'
+#    pod 'RxCocoa'
+#    pod 'RxAlamofire'
+#
+#    # Others
+#    pod 'Alamofire'
+#    pod 'ObjectMapper'
 
 end
 
