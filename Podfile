@@ -10,6 +10,7 @@ target 'topmovies' do
 
     # Others
     pod 'Alamofire'
+    pod 'AlamofireImage',                          '3.5.0'
     pod 'ObjectMapper'
 
 end
