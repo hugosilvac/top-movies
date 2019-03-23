@@ -16,7 +16,7 @@ class RequestManager {
     
     static let shared = RequestManager()
 
-    func fetch(url: String, method: Method = .GET, parameters: [String: Any] = [:], headers: [String: String] = [:], encoding: UrlEncoding = .url, schedulerType: SchedulerType = SerialDispatchQueueScheduler.init(qos: .background), scheduler: ImmediateSchedulerType = MainScheduler.instance, retries: Int = 1, data: Data) -> Observable<String> {
+    func fetch(url: String, method: Method = .GET, parameters: [String: Any] = [:], headers: [String: String] = [:], encoding: UrlEncoding = .url, schedulerType: SchedulerType = SerialDispatchQueueScheduler.init(qos: .background), scheduler: ImmediateSchedulerType = MainScheduler.instance, retries: Int = 1, data: Data = Data()) -> Observable<String> {
         
         return observable(url: url, method: method, parameters: parameters, headers: headers, encoding: encoding, data: data)
             .subscribeOn(schedulerType)

@@ -12,7 +12,7 @@ struct NetworkConstants {
         // Base Url
         static let BaseURL = "https://api.themoviedb.org/3/movie"
         //  Request Token
-        static let Token = "aW9zOlNEYTVnU3VXZmdoNlFVVXU="
+        static let Token = "51c0a758d5713ea61827aab48b4664d0"
     }
     
 }

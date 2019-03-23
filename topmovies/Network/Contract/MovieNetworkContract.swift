@@ -8,6 +8,6 @@
 
 import RxSwift
 
-public protocol MoviesNetworkContract {
-    func popularMovies(page: Int, language: String) -> Observable<Void>
+public protocol MovieNetworkContract {
+    func popularMovies(page: Int, language: String) -> Observable<InfoRequestNetworkModel>
 }
