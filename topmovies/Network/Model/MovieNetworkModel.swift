@@ -30,20 +30,20 @@ public class MovieNetworkModel: Mappable {
     }
     
     public func mapping(map: Map) {
-        voteCount <- map["page"]
-        id <- map["total_results"]
-        video <- map["total_pages"]
-        voteAverage <- map["results"]
-        title <- map["page"]
-        popularity <- map["total_results"]
-        posterPath <- map["total_pages"]
-        originalLanguage <- map["results"]
-        originalTitle <- map["page"]
-        genreIds <- map["total_results"]
-        backdropPath <- map["total_pages"]
-        adult <- map["results"]
-        overview <- map["page"]
-        releaseDate <- map["total_results"]
+        voteCount <- map["vote_count"]
+        id <- map["id"]
+        video <- map["video"]
+        voteAverage <- map["vote_average"]
+        title <- map["title"]
+        popularity <- map["popularity"]
+        posterPath <- map["poster_path"]
+        originalLanguage <- map["original_language"]
+        originalTitle <- map["original_title"]
+        genreIds <- map["genre_ids"]
+        backdropPath <- map["backdrop_path"]
+        adult <- map["adult"]
+        overview <- map["overview"]
+        releaseDate <- map["release_date"]
 
     }
 }

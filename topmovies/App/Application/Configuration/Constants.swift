@@ -9,8 +9,8 @@
 struct Constants {
 
     struct Config {
-        // Base Url
-        static let BaseURL = "https://api.themoviedb.org/3/movie"
+        // Image Url
+        static let ImageURL = "http://image.tmdb.org/t/p/"
     }
     
     struct Cell {
@@ -20,7 +20,7 @@ struct Constants {
     struct RequestMovieParameters {
         static let Language  =  "en-US"
         static let Page         =  1
-        static let Size         =  20
+        static let Size         =  1
     }
     
 }

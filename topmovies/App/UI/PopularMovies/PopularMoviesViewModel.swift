@@ -39,9 +39,8 @@ class PopularMoviesViewModel {
                 .trackError(errorMovie)
                 .asDriverOnErrorJustComplete()
         }
-        
                 
-        let loadMoreMovies = input.loadNextPageTrigger.loadMoreObserver(initialPage: 0, size: Constants.RequestMovieParameters.Size) { (size, page) -> SharedSequence<DriverSharingStrategy, [Movie]> in
+        let loadMoreMovies = input.loadNextPageTrigger.loadMoreObserver(initialPage: 1, size: Constants.RequestMovieParameters.Size) { (size, page) -> SharedSequence<DriverSharingStrategy, [Movie]> in
             return self.movieWorker.popularMovies(page: page, language: language)
                 .trackActivity(activityBottomIndicator)
                 .asDriver(onErrorJustReturn: [Movie]())

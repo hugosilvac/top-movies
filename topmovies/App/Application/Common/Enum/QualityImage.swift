@@ -6,8 +6,12 @@
 //  Copyright © 2019 HugoSilva. All rights reserved.
 //
 
-import UIKit
-
-class QualityImage: NSObject {
-
+enum ImageSize: String {
+    case W92 = "/w92/"
+    case W154 = "/w154/"
+    case W185 = "/w185/"
+    case W342 = "/w342/"
+    case W500 = "/w500/"
+    case W780 = "/w780/"
+    case Original = "/original/"
 }

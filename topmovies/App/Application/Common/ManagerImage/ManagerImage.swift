@@ -10,22 +10,11 @@ import UIKit
 
 struct ManagerImage {
 
-    
-//    static func imageImageSize(imageSize: ImageSize) -> String{
-//        
-//        switch imageSize {
-//        case .Thumbnail:
-//            return image.thumbnail
-//        case .Small:
-//            return image.small
-//        case .Medium:
-//            return image.medium
-//        case .Large:
-//            return image.large
-//        case .Original:
-//            return image.original
-//        }
-//        
-//    }
+    static func linkImage(finalUrl: String) -> String {
+        
+        let urlImage = Constants.Config.ImageURL + ImageSize.W185.rawValue + finalUrl
+        
+        return urlImage
+    }
     
 }

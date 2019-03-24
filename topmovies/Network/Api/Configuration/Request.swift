@@ -36,6 +36,7 @@ class Request {
     
     public static func queryParameters(_ parameters: [String: Any]) -> Request.Type {
         self.parameters = parameters
+        self.parameters["api_key"] = "51c0a758d5713ea61827aab48b4664d0"
         return self
     }
     
@@ -59,23 +60,29 @@ class Request {
   
     public static func requestfetchWithBody() -> Observable<(HTTPURLResponse, Any)> {
         
-        //Make first url from this queryStringParam using URLComponents
-        var urlComponent = URLComponents(string: self.url)!
-        let queryItems = parameters.map  { URLQueryItem(name: $0.key, value: $0.value as? String) }
-        urlComponent.queryItems = queryItems
+//        //Make first url from this queryStringParam using URLComponents
+//        var urlComponent = URLComponents(string: self.url)!
+//        let queryItems = parameters.map  { URLQueryItem(name: $0.key, value: $0.value as? String) }
+//        urlComponent.queryItems = queryItems
+//        
+//        //Now make `URLRequest` and set body and headers with it
+//        var request = URLRequest(url: urlComponent.url!)
+//        request.httpMethod = method.rawValue
+//        request.httpBody = data
+//        request.allHTTPHeaderFields = self.headers
+//        
+//        //Now use this URLRequest with Alamofire to make request
+//        let result  = Request.sharedManager.rx.request(urlRequest: request)
+//            .responseData()
+//            .flatMap({ (response) -> Observable<(HTTPURLResponse, Any)>  in
+//                return Observable.just((response.0, response.1))
+//            })
+//        
+//        return result
         
-        //Now make `URLRequest` and set body and headers with it
-        var request = URLRequest(url: urlComponent.url!)
-        request.httpMethod = method.rawValue
-        request.httpBody = data
-        request.allHTTPHeaderFields = self.headers
         
-        //Now use this URLRequest with Alamofire to make request
-        let result  = Request.sharedManager.rx.request(urlRequest: request)
-            .responseData()
-            .flatMap({ (response) -> Observable<(HTTPURLResponse, Any)>  in
-                return Observable.just((response.0, response.1))
-            })
+        let result = Request.sharedManager
+            .rx.responseJSON(method, url, parameters: parameters, encoding: encoding, headers: headers)
         
         return result
         

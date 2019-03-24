@@ -36,6 +36,25 @@ extension ObservableType {
         }
     }
     
+    public func mapRequestString() -> Observable<String> {
+        return map { (arg) -> String in
+            if let (response, strResponse) = (arg as? (HTTPURLResponse, Any)) {
+                
+                if let error = self.checkResponseError(urlResponse: response, json: strResponse) {
+                    throw error
+                }
+                
+                if strResponse is String {
+                    return strResponse as! String
+                }else{
+                    throw self.createError(code: -1, description: "Could not decode object")
+                }
+                
+            }
+            throw self.createError(code: -1, description: "Could not decode object")
+        }
+    }
+    
     public func mapRequestJson() -> Observable<String> {
         return map { (arg) -> String in
             if let (response, json) = (arg as? (HTTPURLResponse, Any)) {

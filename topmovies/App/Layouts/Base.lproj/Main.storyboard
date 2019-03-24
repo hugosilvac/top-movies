@@ -19,9 +19,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bN5-jl-yHa">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="4" y="64" width="367" height="603"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TGO-ny-cLf">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="TGO-ny-cLf">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -32,14 +32,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bN5-jl-yHa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="4Ao-7W-QUe"/>
-                            <constraint firstItem="bN5-jl-yHa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IS6-BF-YJb"/>
-                            <constraint firstItem="bN5-jl-yHa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JJ2-KC-Yvz"/>
-                            <constraint firstItem="bN5-jl-yHa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ljA-vy-CXh"/>
+                            <constraint firstItem="bN5-jl-yHa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="4" id="Ghg-iM-D4U"/>
+                            <constraint firstItem="bN5-jl-yHa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bHU-Hl-UUS"/>
+                            <constraint firstItem="bN5-jl-yHa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-4" id="h1F-Ai-R1i"/>
+                            <constraint firstItem="bN5-jl-yHa" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oCm-Ir-0ul"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Oug-BH-00g"/>
+                    <connections>
+                        <outlet property="collectionView" destination="bN5-jl-yHa" id="7eC-4X-19g"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
