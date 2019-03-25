@@ -15,6 +15,7 @@ class InfoMovieViewController: UIViewController {
     @IBOutlet weak var genreMovie: UILabel!
     @IBOutlet weak var descriptionMovie: UITextView!
     @IBOutlet weak var nameMovie: UILabel!
+    @IBOutlet weak var backgroundMovie: UIImageView!
     
     var movie: Movie?
     
@@ -23,6 +24,7 @@ class InfoMovieViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         imageMovie.af_setImage(withURL:  URL(string: ManagerImage.linkImage(finalUrl: movie!.posterPath))!)
+        backgroundMovie.af_setImage(withURL:  URL(string: ManagerImage.linkImage(finalUrl: movie!.backdropPath))!)
         nameMovie.text = movie?.title
         durationMovie.text = "oo"
         genreMovie.text = "dd"
