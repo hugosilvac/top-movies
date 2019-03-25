@@ -24,6 +24,14 @@
 		C141AE1F22447F80002B8E04 /* NetworkContstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141AE1E22447F80002B8E04 /* NetworkContstants.swift */; };
 		C141AE2322448323002B8E04 /* MovieNetworkContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141AE2222448323002B8E04 /* MovieNetworkContract.swift */; };
 		C141AE252244846E002B8E04 /* MovieNetworkWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141AE242244846E002B8E04 /* MovieNetworkWorker.swift */; };
+		C144D29D2248D78F004AB949 /* Mapper+MoviePersistenceExtensions+Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D29C2248D78F004AB949 /* Mapper+MoviePersistenceExtensions+Business.swift */; };
+		C144D2A12248E053004AB949 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C144D2A02248E053004AB949 /* FavoriteViewController.swift */; };
+		C14CB331224824F30066BC78 /* Navigation+Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CB330224824F30066BC78 /* Navigation+Push.swift */; };
+		C14CB3342248255D0066BC78 /* InfoMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CB3332248255D0066BC78 /* InfoMovieViewController.swift */; };
+		C14CB33A2248272B0066BC78 /* MoviePersistenceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CB3392248272B0066BC78 /* MoviePersistenceContract.swift */; };
+		C14CB33C224828140066BC78 /* MoviePersistenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CB33B224828140066BC78 /* MoviePersistenceModel.swift */; };
+		C14CB33F2248291B0066BC78 /* ConnectionRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CB33E2248291B0066BC78 /* ConnectionRealm.swift */; };
+		C14CB341224829760066BC78 /* MoviePersistenceWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C14CB340224829760066BC78 /* MoviePersistenceWorker.swift */; };
 		C16A5F682245C29400D4CE38 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A5F672245C29400D4CE38 /* Router.swift */; };
 		C16A5F6A2245C2B800D4CE38 /* MovieRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A5F692245C2B800D4CE38 /* MovieRouter.swift */; };
 		C16A5F6D2245C42F00D4CE38 /* InfoRequestNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A5F6C2245C42F00D4CE38 /* InfoRequestNetworkModel.swift */; };
@@ -87,6 +95,14 @@
 		C141AE20224480EA002B8E04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C141AE2222448323002B8E04 /* MovieNetworkContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetworkContract.swift; sourceTree = "<group>"; };
 		C141AE242244846E002B8E04 /* MovieNetworkWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieNetworkWorker.swift; sourceTree = "<group>"; };
+		C144D29C2248D78F004AB949 /* Mapper+MoviePersistenceExtensions+Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mapper+MoviePersistenceExtensions+Business.swift"; sourceTree = "<group>"; };
+		C144D2A02248E053004AB949 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		C14CB330224824F30066BC78 /* Navigation+Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Navigation+Push.swift"; sourceTree = "<group>"; };
+		C14CB3332248255D0066BC78 /* InfoMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoMovieViewController.swift; sourceTree = "<group>"; };
+		C14CB3392248272B0066BC78 /* MoviePersistenceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePersistenceContract.swift; sourceTree = "<group>"; };
+		C14CB33B224828140066BC78 /* MoviePersistenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePersistenceModel.swift; sourceTree = "<group>"; };
+		C14CB33E2248291B0066BC78 /* ConnectionRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionRealm.swift; sourceTree = "<group>"; };
+		C14CB340224829760066BC78 /* MoviePersistenceWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviePersistenceWorker.swift; sourceTree = "<group>"; };
 		C16A5F672245C29400D4CE38 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C16A5F692245C2B800D4CE38 /* MovieRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRouter.swift; sourceTree = "<group>"; };
 		C16A5F6C2245C42F00D4CE38 /* InfoRequestNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRequestNetworkModel.swift; sourceTree = "<group>"; };
@@ -170,6 +186,7 @@
 		C141ADD822446EA4002B8E04 /* topmovies */ = {
 			isa = PBXGroup;
 			children = (
+				C14CB3352248264D0066BC78 /* Persistence */,
 				C16A5F812245DD7D00D4CE38 /* App */,
 				C16A5F702245C80000D4CE38 /* Business */,
 				C141AE0722447335002B8E04 /* Network */,
@@ -274,6 +291,73 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C144D29F2248E032004AB949 /* FavoriteMovie */ = {
+			isa = PBXGroup;
+			children = (
+				C144D2A02248E053004AB949 /* FavoriteViewController.swift */,
+			);
+			path = FavoriteMovie;
+			sourceTree = "<group>";
+		};
+		C14CB32F224824C10066BC78 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB330224824F30066BC78 /* Navigation+Push.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C14CB3322248253B0066BC78 /* InfoMovie */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB3332248255D0066BC78 /* InfoMovieViewController.swift */,
+			);
+			path = InfoMovie;
+			sourceTree = "<group>";
+		};
+		C14CB3352248264D0066BC78 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB33D224829040066BC78 /* Configuration */,
+				C14CB338224826A00066BC78 /* Worker */,
+				C14CB337224826830066BC78 /* Contract */,
+				C14CB336224826780066BC78 /* Model */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		C14CB336224826780066BC78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB33B224828140066BC78 /* MoviePersistenceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C14CB337224826830066BC78 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB3392248272B0066BC78 /* MoviePersistenceContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		C14CB338224826A00066BC78 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB340224829760066BC78 /* MoviePersistenceWorker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		C14CB33D224829040066BC78 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C14CB33E2248291B0066BC78 /* ConnectionRealm.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		C16A5F6B2245C2F500D4CE38 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +399,7 @@
 			children = (
 				C16A5F782245CD0800D4CE38 /* Mapper+MovieExtensions+Business.swift */,
 				C16A5F7A2245CDF700D4CE38 /* Mapper+InfoRequestExtensions+Business.swift */,
+				C144D29C2248D78F004AB949 /* Mapper+MoviePersistenceExtensions+Business.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";
@@ -359,6 +444,8 @@
 		C16A5F842245DDC400D4CE38 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C144D29F2248E032004AB949 /* FavoriteMovie */,
+				C14CB3322248253B0066BC78 /* InfoMovie */,
 				C16A5F872245DE1200D4CE38 /* PopularMovies */,
 			);
 			path = UI;
@@ -367,6 +454,7 @@
 		C16A5F852245DDD400D4CE38 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C14CB32F224824C10066BC78 /* Navigation */,
 				C16A5F9D2245EB6500D4CE38 /* Enum */,
 				C16A5F9A2245EA9500D4CE38 /* ManagerImage */,
 				C16A5F952245E4EE00D4CE38 /* Extensions */,
@@ -594,6 +682,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -606,6 +696,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -646,9 +738,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C16A5F992245E56400D4CE38 /* Observable+Extensions.swift in Sources */,
+				C14CB33F2248291B0066BC78 /* ConnectionRealm.swift in Sources */,
+				C14CB331224824F30066BC78 /* Navigation+Push.swift in Sources */,
 				C16A5F942245E2E100D4CE38 /* Constants.swift in Sources */,
 				C141AE0F22447429002B8E04 /* RequestManager.swift in Sources */,
 				C16A5F892245DE2A00D4CE38 /* PopularMoviesViewController.swift in Sources */,
+				C14CB341224829760066BC78 /* MoviePersistenceWorker.swift in Sources */,
 				C16A5F792245CD0800D4CE38 /* Mapper+MovieExtensions+Business.swift in Sources */,
 				C16A5F7B2245CDF700D4CE38 /* Mapper+InfoRequestExtensions+Business.swift in Sources */,
 				C16A5F8B2245DE3C00D4CE38 /* PopularMoviesViewModel.swift in Sources */,
@@ -656,11 +751,15 @@
 				C16A5F762245C91F00D4CE38 /* Movie.swift in Sources */,
 				C141AE1B224474D2002B8E04 /* ExtensionApiObservableType.swift in Sources */,
 				C16A5F802245D29D00D4CE38 /* MovieBusinessWorker.swift in Sources */,
+				C14CB33C224828140066BC78 /* MoviePersistenceModel.swift in Sources */,
 				C141AE1F22447F80002B8E04 /* NetworkContstants.swift in Sources */,
 				C141AE2322448323002B8E04 /* MovieNetworkContract.swift in Sources */,
 				C16A5F6F2245C51700D4CE38 /* MovieNetworkModel.swift in Sources */,
+				C14CB3342248255D0066BC78 /* InfoMovieViewController.swift in Sources */,
 				C141AE1D224474E0002B8E04 /* RequestConfiguration.swift in Sources */,
 				C141AE152244749C002B8E04 /* Request.swift in Sources */,
+				C144D29D2248D78F004AB949 /* Mapper+MoviePersistenceExtensions+Business.swift in Sources */,
+				C144D2A12248E053004AB949 /* FavoriteViewController.swift in Sources */,
 				C16A5F912245E15E00D4CE38 /* MovieCollectionViewCell.swift in Sources */,
 				C16A5F9F2245EB7C00D4CE38 /* QualityImage.swift in Sources */,
 				C141AE1122447472002B8E04 /* RequestManager+Observable.swift in Sources */,
@@ -668,6 +767,7 @@
 				C16A5F972245E51700D4CE38 /* ActivityIndicatorExtension.swift in Sources */,
 				C16A5F7D2245D1F400D4CE38 /* MovieBusinessContract.swift in Sources */,
 				C16A5F6A2245C2B800D4CE38 /* MovieRouter.swift in Sources */,
+				C14CB33A2248272B0066BC78 /* MoviePersistenceContract.swift in Sources */,
 				C141AE19224474C3002B8E04 /* ExtensionApiHeaderRequest.swift in Sources */,
 				C141AE17224474B2002B8E04 /* RequestCertificate.swift in Sources */,
 				C16A5F9C2245EABD00D4CE38 /* ManagerImage.swift in Sources */,

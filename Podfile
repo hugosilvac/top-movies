@@ -12,6 +12,7 @@ target 'topmovies' do
     pod 'Alamofire'
     pod 'AlamofireImage',                          '3.5.0'
     pod 'ObjectMapper'
+    pod 'RealmSwift',              '3.12.0'
 
 end
 

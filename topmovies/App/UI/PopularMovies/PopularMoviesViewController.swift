@@ -70,14 +70,13 @@ class PopularMoviesViewController: UIViewController {
             .bind(to: collectionView.rx.items(cellIdentifier: Constants.Cell.ReuseIdentifierMovieCollectionCell, cellType: MovieCollectionViewCell.self))
             { tv, movie, cell in
                 //ManagerImage
-                cell.albumDefaultCell(strImage: ManagerImage.linkImage(finalUrl: movie.posterPath))
+                cell.albumDefaultCell(strImage: ManagerImage.linkImage(finalUrl: movie.posterPath), nameMovie: movie.title)
 
             }.disposed(by: disposeBag)
         
         output.selectedPost
-            .do(onNext: { element in
-                print(element.id)
-               
+            .do(onNext: { movie in
+               Navigation.pushTabBarViewController(viewController: self, movie: movie)
             })
             .drive()
             .disposed(by: disposeBag)

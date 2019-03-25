@@ -18,7 +18,7 @@ struct Constants {
     }
     
     struct RequestMovieParameters {
-        static let Language  =  "en-US"
+        static let Language  =  "pt-br"
         static let Page         =  1
         static let Size         =  1
     }

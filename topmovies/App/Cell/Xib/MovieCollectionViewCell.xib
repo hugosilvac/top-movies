@@ -21,20 +21,33 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zke-86-gKS">
                         <rect key="frame" x="0.0" y="0.0" width="145" height="216"/>
-                        <color key="backgroundColor" red="1" green="0.5981895398" blue="0.38319138089999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Movie " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2p-fx-bSW">
+                        <rect key="frame" x="6" y="162" width="132" height="47"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="47" id="pMK-AC-OzI"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Zke-86-gKS" secondAttribute="trailing" id="4sG-fD-TFu"/>
+                <constraint firstAttribute="bottom" secondItem="I2p-fx-bSW" secondAttribute="bottom" constant="7" id="6dU-ab-TBx"/>
                 <constraint firstItem="Zke-86-gKS" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WT4-Gt-LeI"/>
                 <constraint firstItem="Zke-86-gKS" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Wkp-ye-w10"/>
+                <constraint firstItem="I2p-fx-bSW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="6" id="fha-vD-wa0"/>
+                <constraint firstAttribute="trailing" secondItem="I2p-fx-bSW" secondAttribute="trailing" constant="7" id="klt-Lj-OVS"/>
                 <constraint firstAttribute="bottom" secondItem="Zke-86-gKS" secondAttribute="bottom" id="meL-lU-8L0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="145" height="216"/>
             <connections>
                 <outlet property="imageMovie" destination="Zke-86-gKS" id="9Ox-mK-xUK"/>
+                <outlet property="nameMovie" destination="I2p-fx-bSW" id="Xfn-Pe-xM2"/>
             </connections>
             <point key="canvasLocation" x="165.59999999999999" y="134.93253373313345"/>
         </collectionViewCell>
