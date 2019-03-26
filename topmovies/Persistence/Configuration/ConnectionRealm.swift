@@ -10,12 +10,6 @@ import RealmSwift
 
 class ConnectionRealm {
 
-    static let config = Realm.Configuration(
-        schemaVersion: 1,
-        migrationBlock: { migration, oldSchemaVersion in
-            
-    })
-    
-    static var realm = try! Realm(configuration: config)
+    static var realm = try! Realm()
     
 }

@@ -20,7 +20,6 @@ class PopularMoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         configCollection()
     }
@@ -30,10 +29,11 @@ class PopularMoviesViewController: UIViewController {
     }
     
     private func configCollection() {
+        
+        
         collectionView.refreshControl = UIRefreshControl()
-        collectionView.backgroundColor = UIColor.lightGray
         collectionView.showsVerticalScrollIndicator = false
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 60, right: 0)
         
         // Reuse Identifier
         collectionView.register(UINib(nibName: Constants.Cell.ReuseIdentifierMovieCollectionCell, bundle: nil), forCellWithReuseIdentifier: Constants.Cell.ReuseIdentifierMovieCollectionCell)

@@ -10,9 +10,10 @@ target 'topmovies' do
 
     # Others
     pod 'Alamofire'
-    pod 'AlamofireImage',                          '3.5.0'
+    pod 'AlamofireImage',           '3.5.0'
     pod 'ObjectMapper'
-    pod 'RealmSwift',              '3.12.0'
+    pod 'RealmSwift',               '3.12.0'
+    pod 'EZRatingView',             '~> 2.0'
 
 end
 

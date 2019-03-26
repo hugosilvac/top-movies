@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.8.1)
   - AlamofireImage (3.5.0):
     - Alamofire (~> 4.8)
+  - EZRatingView (2.0.1)
   - ObjectMapper (3.4.2)
   - Realm (3.12.0):
     - Realm/Headers (= 3.12.0)
@@ -22,6 +23,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage (= 3.5.0)
+  - EZRatingView (~> 2.0)
   - ObjectMapper
   - RealmSwift (= 3.12.0)
   - RxAlamofire
@@ -32,6 +34,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - EZRatingView
     - ObjectMapper
     - Realm
     - RealmSwift
@@ -43,6 +46,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
+  EZRatingView: 009292c2363600737b9ff856d652e3d12ff960f6
   ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
   Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
   RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
@@ -51,6 +55,6 @@ SPEC CHECKSUMS:
   RxCocoa: 2f35a76bf8887872e28a1914112395b11b8e0e64
   RxSwift: 92fcf68dfef21f3e2ab1965363d9e7b3d787597e
 
-PODFILE CHECKSUM: 4a0375e6561c7322f6b3ed1847f68d70397f48e0
+PODFILE CHECKSUM: 9fb75981239a732bfe778522372781522f2321cf
 
 COCOAPODS: 1.5.3

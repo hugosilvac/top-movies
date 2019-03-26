@@ -19,13 +19,17 @@ public class MoviePersistenceModel: Object {
     @objc dynamic var posterPath: String = ""
     @objc dynamic var originalLanguage: String = ""
     @objc dynamic var originalTitle: String = ""
-    @objc dynamic var genreIds: [Int] = [Int]()
     @objc dynamic var backdropPath: String = ""
     @objc dynamic var adult: Bool = false
     @objc dynamic var overview: String = ""
     @objc dynamic var releaseDate: String = ""
+    var genreIds = List<Int>()
     
-    public convenience init(voteCount: Int, id: Int, video: Bool, voteAverage: Double, title: String, popularity: Double, posterPath: String, originalLanguage: String, originalTitle: String, genreIds: [Int], backdropPath: String, adult: Bool, overview: String, releaseDate: String ) {
+    override public class func primaryKey() -> String? {
+        return "id"
+    }
+    
+    public convenience init(voteCount: Int, id: Int, video: Bool, voteAverage: Double, title: String, popularity: Double, posterPath: String, originalLanguage: String, originalTitle: String, genreIds: List<Int>, backdropPath: String, adult: Bool, overview: String, releaseDate: String ) {
         self.init()
         self.voteCount = voteCount
         self.id = id

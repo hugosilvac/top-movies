@@ -28,9 +28,11 @@ public class MovieBusinesskWorker: MovieBusinessContract {
     public func saveMovie(movie: Movie) -> Bool {
         return moviePersistenceWorker.saveMovie(movie: movie.toPercistence())
     }
-    
-    public func favoriteMovies() -> [Movie] {
-        return moviePersistenceWorker.favoriteMovies().toMovieList()
-    }
 
+    public func favoriteMovies() -> Observable<[Movie]> {
+        return moviePersistenceWorker.favoriteMovies()
+            .flatMap({ (element) -> Observable<[Movie]> in
+                Observable<[Movie]>.just(element.toMovieList())
+            })
+    }
 }

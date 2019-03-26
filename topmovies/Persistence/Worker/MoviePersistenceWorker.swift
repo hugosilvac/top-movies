@@ -6,6 +6,7 @@
 //  Copyright © 2019 HugoSilva. All rights reserved.
 //
 
+import RxSwift
 import RealmSwift
 
 public class MoviePersistenceWorker: MoviePersistenceContract {
@@ -25,9 +26,14 @@ public class MoviePersistenceWorker: MoviePersistenceContract {
         
     }
     
-    public func favoriteMovies() -> Results<MoviePersistenceModel> {
-        let movie = ConnectionRealm.realm.objects(MoviePersistenceModel.self)
-        return movie
+    public func favoriteMovies() -> Observable<Results<MoviePersistenceModel>> {
+        return Observable<Results<MoviePersistenceModel>>.create { observer in
+            observer.on(.next(
+                ConnectionRealm.realm.objects(MoviePersistenceModel.self)
+                )
+            )
+            return Disposables.create()
+        }
     }
     
     

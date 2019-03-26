@@ -6,9 +6,10 @@
 //  Copyright © 2019 HugoSilva. All rights reserved.
 //
 
+import RxSwift
 import RealmSwift
 
 public protocol MoviePersistenceContract {
     func saveMovie(movie: MoviePersistenceModel) -> Bool
-    func favoriteMovies() -> Results<MoviePersistenceModel>
+    func favoriteMovies() -> Observable<Results<MoviePersistenceModel>>
 }
