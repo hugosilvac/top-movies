@@ -11,13 +11,21 @@ import RxSwift
 class InfoMovieViewModel {
 
     private let movieWorker = MovieBusinesskWorker()
-    private let genderWorker = GenderBusinessWorker()
+    private let genreWorker = GenreBusinessWorker()
     
-    func saveMovie(movie: Movie) -> Bool {
+    func isFavorite(id: Int) -> Bool{
+        return movieWorker.isFavorite(id: id)
+    }
+    
+    func saveMovie(movie: Movie, arrayGenre: [Genre]) -> Bool {
         return movieWorker.saveMovie(movie: movie)
     }
     
-    func genderMovies(language: String) -> Observable<[Gender]> {
-        return genderWorker.genderMovies(language:language)
+    func deleteMovie(movie: Movie) -> Bool {
+        return movieWorker.deleteMovie(movie: movie)
+    }
+    
+    func genderMovies(language: String) -> Observable<[Genre]> {
+        return genreWorker.genreMovies(language:language)
     }
 }

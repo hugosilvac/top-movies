@@ -7,11 +7,11 @@
 //
 
 
-extension ListGenderNetworkModel {
-    func toMovieList() -> [Gender] {
-        let list =  self.listGender
-        var listGender = [Gender]()
-        listGender.append(contentsOf: list.map({ (element) -> Gender in
+extension ListGenreNetworkModel {
+    func toMovieList() -> [Genre] {
+        let list =  self.listGenre
+        var listGender = [Genre]()
+        listGender.append(contentsOf: list.map({ (element) -> Genre in
             element.toApp()
         }))
         return listGender

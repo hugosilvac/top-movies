@@ -19,8 +19,9 @@ class InfoMovieViewController: UIViewController {
     @IBOutlet weak var backgroundMovie: UIImageView!
     @IBOutlet var ratingView: EZRatingView!
     
+    var isFavorite: Bool = false
     let infoMovieViewModel = InfoMovieViewModel()
-    private var resultGender: [Gender] = [Gender]()
+    private var resultGender: [Genre] = [Genre]()
     private let disposeBag = DisposeBag()
     
     var movie: Movie?
@@ -29,14 +30,24 @@ class InfoMovieViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        configurationView()
         fieldView()
-        genderMovies()
- 
+        checkIsFavorite()
     }
     
-    private func configurationView() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "save", style: .done, target: self, action: #selector(rightButton))
+    private func checkIsFavorite() {
+        if infoMovieViewModel.isFavorite(id: (movie?.id)!) {
+            isFavorite = true
+            configurationView(title: "Remover")
+        }else{
+            isFavorite = false
+            configurationView(title: "Adicionar")
+            genderMovies()
+        }
+        
+    }
+    
+    private func configurationView(title: String) {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: title, style: .done, target: self, action: #selector(rightButton))
     }
     
     private func fieldView() {
@@ -52,11 +63,15 @@ class InfoMovieViewController: UIViewController {
     }
     
     @objc func rightButton() {
-        if infoMovieViewModel.saveMovie(movie: movie!) {
-            print("true")
-        }else {
-            print("false")
+        
+        if isFavorite {
+            _ = infoMovieViewModel.deleteMovie(movie: movie!)
+            isFavorite = false
+        }else{
+            _ = infoMovieViewModel.saveMovie(movie: movie!, arrayGenre: resultGender)
+            isFavorite = true
         }
+        checkIsFavorite()
     }
 
     func genderMovies() {

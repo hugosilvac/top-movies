@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aAl-nL-eDG">
             <objects>
                 <navigationController id="4u3-Sf-6J2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="NRX-Pd-thz"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="NRX-Pd-thz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9WP-k5-4lb">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="-1860" y="897"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="fGb-st-oZG">
             <objects>
-                <tabBarController id="o8M-0E-U9K" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="o8M-0E-U9K" customClass="TabBarViewController" customModule="topmovies" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="w8N-CA-bIr"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="AaT-eB-ytN">
@@ -322,11 +322,11 @@
             </objects>
             <point key="canvasLocation" x="3532" y="727.28635682158927"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="9S4-NY-kP0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q6H-7S-Ebg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="0J3-w0-7fr"/>
+                    <tabBarItem key="tabBarItem" systemItem="mostViewed" id="0J3-w0-7fr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ojz-pN-7VT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

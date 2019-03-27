@@ -7,6 +7,6 @@
 //
 import RxSwift
 
-public protocol GenderBusinessContract {
-    func genderMovies(language: String) -> Observable<[Gender]>
+public protocol GenreBusinessContract {
+    func genreMovies(language: String) -> Observable<[Genre]>
 }

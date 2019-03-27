@@ -6,12 +6,12 @@
 //  Copyright © 2019 HugoSilva. All rights reserved.
 //
 
-enum GenderRouter: Router {
-    case listGender
+enum GenreRouter: Router {
+    case listGenre
     
     var name: String {
         switch self {
-        case .listGender: return "/genre/movie/list"
+        case .listGenre: return "/genre/movie/list"
         }
     }
 }

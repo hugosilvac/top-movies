@@ -6,7 +6,7 @@
 //  Copyright © 2019 HugoSilva. All rights reserved.
 //
 
-public class Gender {
+public class Genre {
 
     var id: Int = 0
     var name: String = ""

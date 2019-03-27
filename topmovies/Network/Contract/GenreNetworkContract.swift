@@ -8,7 +8,7 @@
 
 import RxSwift
 
-public protocol GenderNetworkContract {
-    func genderMovies(language: String) -> Observable<ListGenderNetworkModel>
+public protocol GenreNetworkContract {
+    func genreMovies(language: String) -> Observable<ListGenreNetworkModel>
 }
 

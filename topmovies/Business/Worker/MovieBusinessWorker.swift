@@ -24,9 +24,17 @@ public class MovieBusinesskWorker: MovieBusinessContract {
                 Observable<[Movie]>.just(element.toMovieList())
             })
     }
-
+    
+    public func isFavorite(id: Int) -> Bool {
+        return moviePersistenceWorker.isFavorite(id: id)
+    }
+    
     public func saveMovie(movie: Movie) -> Bool {
         return moviePersistenceWorker.saveMovie(movie: movie.toPercistence())
+    }
+    
+    public func deleteMovie(movie: Movie) -> Bool {
+        return moviePersistenceWorker.removeMovie(movie: movie.toPercistence())
     }
 
     public func favoriteMovies() -> Observable<[Movie]> {

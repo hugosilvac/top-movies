@@ -11,5 +11,7 @@ import RealmSwift
 
 public protocol MoviePersistenceContract {
     func saveMovie(movie: MoviePersistenceModel) -> Bool
+    func removeMovie(movie: MoviePersistenceModel) -> Bool
+    func isFavorite(id: Int) -> Bool
     func favoriteMovies() -> Observable<Results<MoviePersistenceModel>>
 }

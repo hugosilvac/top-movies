@@ -18,11 +18,26 @@ public class MoviePersistenceWorker: MoviePersistenceContract {
             ConnectionRealm.realm.add(movie, update: true)
         }
         
-        if let movie = getMovie(id: movie.id) {
-            return true
-        }else {
-            return false
+        return (getMovie(id: movie.id) != nil) ? true : false
+       
+    }
+    
+    public func removeMovie(movie: MoviePersistenceModel) -> Bool {
+        
+        if let deleteMovie = getMovie(id: movie.id) {
+            try? ConnectionRealm.realm.write {
+                ConnectionRealm.realm.delete(deleteMovie)
+            }
         }
+        
+        return (getMovie(id: movie.id) != nil) ? false : true
+        
+    }
+    
+    public func isFavorite(id: Int) -> Bool {
+        
+        return (getMovie(id: id) != nil) ? true : false
+        
         
     }
     

@@ -8,7 +8,7 @@
 
 import ObjectMapper
 
-public class GenderNetworkModel: Mappable {
+public class GenreNetworkModel: Mappable {
 
     var id: Int = 0
     var name: String = ""

@@ -30,7 +30,6 @@ class PopularMoviesViewController: UIViewController {
     
     private func configCollection() {
         
-        
         collectionView.refreshControl = UIRefreshControl()
         collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 60, right: 0)

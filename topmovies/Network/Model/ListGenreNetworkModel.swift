@@ -8,15 +8,15 @@
 
 import ObjectMapper
 
-public class ListGenderNetworkModel: Mappable {
+public class ListGenreNetworkModel: Mappable {
     
-    var listGender: [GenderNetworkModel] = [GenderNetworkModel]()
+    var listGenre: [GenreNetworkModel] = [GenreNetworkModel]()
     
     required convenience public init?(map: Map) {
         self.init()
     }
     
     public func mapping(map: Map) {
-        listGender <- map["genres"]
+        listGenre <- map["genres"]
     }
 }

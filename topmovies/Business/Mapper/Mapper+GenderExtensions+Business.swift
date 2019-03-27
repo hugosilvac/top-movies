@@ -6,16 +6,16 @@
 //  Copyright © 2019 HugoSilva. All rights reserved.
 //
 
-extension GenderNetworkModel {
-    func toApp() -> Gender {
-        return Gender(id: self.id, name: self.name)
+extension GenreNetworkModel {
+    func toApp() -> Genre {
+        return Genre(id: self.id, name: self.name)
     }
 }
 
-extension Collection where Element == GenderNetworkModel {
-    func toMovieList() -> [Gender] {
-        var network = [Gender]()
-        network.append(contentsOf: self.map({ (element) -> Gender in
+extension Collection where Element == GenreNetworkModel {
+    func toMovieList() -> [Genre] {
+        var network = [Genre]()
+        network.append(contentsOf: self.map({ (element) -> Genre in
             element.toApp()
         }))
         return network
