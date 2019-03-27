@@ -22,6 +22,7 @@ public class Movie {
     public var adult: Bool = false
     public var overview: String = ""
     public var releaseDate: String = ""
+    public var genreObject: [Genre] = [Genre]()
     
     public convenience init(voteCount: Int, id: Int, video: Bool, voteAverage: Double, title: String, popularity: Double, posterPath: String, originalLanguage: String, originalTitle: String, genreIds: [Int], backdropPath: String, adult: Bool, overview: String, releaseDate: String ) {
         self.init()

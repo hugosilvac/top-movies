@@ -10,7 +10,7 @@ struct NetworkConstants {
     
     struct Config {
         // Base Url
-        static let BaseURL = "https://api.themoviedb.org/3/movie"
+        static let BaseURL = "https://api.themoviedb.org/3"
         //  Request Token
         static let Token = "51c0a758d5713ea61827aab48b4664d0"
     }
