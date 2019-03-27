@@ -11,7 +11,7 @@ enum MovieRouter: Router {
     
     var name: String {
         switch self {
-        case .popular: return "/popular"
+        case .popular: return "/movie/popular"
         }
     }
 }

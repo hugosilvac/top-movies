@@ -12,10 +12,10 @@ import RxAlamofire
 typealias RequestManager_Observable = RequestManager
 extension RequestManager_Observable {
     
-    func observable(url: String, method: Method = .GET ,parameters: [String: Any] = [:], headers: [String: String] = [:], encoding: UrlEncoding = .json, data: Data) -> Observable<(HTTPURLResponse, Any)> {
+    func observable(url: String, method: Method = .GET ,parameters: [String: Any] = [:], headers: [String: String] = [:], encoding: UrlEncoding = .json) -> Observable<(HTTPURLResponse, Any)> {
         return Request.fromPathURL(url).method(method)
             .encodParameters(encoding).header(headers)
-            .data(data).queryParameters(parameters).requestfetchWithBody()
+            .queryParameters(parameters).request()
     }
     
 }
