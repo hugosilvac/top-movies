@@ -55,12 +55,6 @@ class PopularMoviesViewController: UIViewController {
         
         let output = popularMoviesViewModel.transform(input: input, page: Constants.RequestMovieParameters.Page, language: Constants.RequestMovieParameters.Language)
         
-        output.fetchingBottom
-            .asObservable()
-            .subscribe(onNext:{
-                $0 ? self.startSpinnerBottom(collectionView: self.collectionView) : self.stopSpinnerBottom()
-            }).disposed(by: disposeBag)
-        
         output.fetchingTop
             .drive(collectionView.refreshControl!.rx.isRefreshing)
             .disposed(by: disposeBag)
@@ -102,26 +96,4 @@ class PopularMoviesViewController: UIViewController {
         return flowLayout
     }
     
-    
-    func startSpinnerBottom(collectionView: UICollectionView) {
-//        if refreshBottom == nil {
-            refreshBottom = UIRefreshControl()
-            refreshBottom?.sizeToFit()
-//            refreshBottom?.cycleColors = [UIColor.lightGray]
-//            refreshBottom?.progress = 0.5
-//            refreshBottom?.strokeWidth = refreshBottom
-            collectionView.addSubview(refreshBottom!)
-            refreshBottom?.frame = CGRect(x: collectionView.center.x - 15, y: (collectionView.contentOffset.y + collectionView.frame.height) - 50, width: refreshBottom!.frame.width, height: refreshBottom!.frame.height)
-//            refreshBottom.st
-//        } else {
-//            refreshBottom!.startAnimating()
-//        }
-    }
-    
-    func stopSpinnerBottom() {
-        if refreshBottom != nil {
-            refreshBottom?.removeFromSuperview()
-            refreshBottom = nil
-        }
-    }
 }

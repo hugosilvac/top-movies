@@ -25,12 +25,16 @@ public class MovieBusinesskWorker: MovieBusinessContract {
             })
     }
     
-    public func isFavorite(id: Int) -> Bool {
-        return moviePersistenceWorker.isFavorite(id: id)
+    public func getMovie(id: Int) -> Movie? {
+        if let movie = moviePersistenceWorker.getMovie(id:id) {
+            return movie.toApp(listGender: movie.genre )
+        }
+        return nil
     }
     
-    public func saveMovie(movie: Movie) -> Bool {
-        return moviePersistenceWorker.saveMovie(movie: movie.toPercistence())
+    public func saveMovie(movie: Movie, arrayGenre: [Genre])  -> Bool {
+        let movie = movie.toPercistence(arrayGenre: arrayGenre)
+        return moviePersistenceWorker.saveMovie(movie: movie)
     }
     
     public func deleteMovie(movie: Movie) -> Bool {

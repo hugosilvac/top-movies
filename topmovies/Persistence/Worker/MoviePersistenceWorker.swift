@@ -17,9 +17,7 @@ public class MoviePersistenceWorker: MoviePersistenceContract {
         try? ConnectionRealm.realm.write {
             ConnectionRealm.realm.add(movie, update: true)
         }
-        
         return (getMovie(id: movie.id) != nil) ? true : false
-       
     }
     
     public func removeMovie(movie: MoviePersistenceModel) -> Bool {
@@ -29,15 +27,7 @@ public class MoviePersistenceWorker: MoviePersistenceContract {
                 ConnectionRealm.realm.delete(deleteMovie)
             }
         }
-        
         return (getMovie(id: movie.id) != nil) ? false : true
-        
-    }
-    
-    public func isFavorite(id: Int) -> Bool {
-        
-        return (getMovie(id: id) != nil) ? true : false
-        
         
     }
     
@@ -51,8 +41,7 @@ public class MoviePersistenceWorker: MoviePersistenceContract {
         }
     }
     
-    
-    private func getMovie(id: Int) -> MoviePersistenceModel? {
+    public func getMovie(id: Int) -> MoviePersistenceModel? {
         return ConnectionRealm.realm.objects(MoviePersistenceModel.self).filter("id = %@", id).first
     }
 

@@ -35,15 +35,17 @@ class InfoMovieViewController: UIViewController {
     }
     
     private func checkIsFavorite() {
-        if infoMovieViewModel.isFavorite(id: (movie?.id)!) {
+        let favoriteMovie = infoMovieViewModel.getMovie(id: (movie?.id)!)
+        if favoriteMovie != nil {
+            self.movie = favoriteMovie
             isFavorite = true
             configurationView(title: "Remover")
+            genderMoviesFavorites(arrayGenre: movie?.genreObject ?? [])
         }else{
             isFavorite = false
             configurationView(title: "Adicionar")
             genderMovies()
         }
-        
     }
     
     private func configurationView(title: String) {
@@ -66,14 +68,28 @@ class InfoMovieViewController: UIViewController {
         
         if isFavorite {
             _ = infoMovieViewModel.deleteMovie(movie: movie!)
+            configurationView(title: "Adicionar")
             isFavorite = false
         }else{
             _ = infoMovieViewModel.saveMovie(movie: movie!, arrayGenre: resultGender)
+            configurationView(title: "Remover")
             isFavorite = true
         }
-        checkIsFavorite()
     }
+    
+}
 
+extension InfoMovieViewController {
+    
+    func genderMoviesFavorites(arrayGenre: [Genre]) {
+        
+        var strGenre = ""
+        for  (index, gender) in arrayGenre.enumerated() {
+            strGenre = index == 0 ? "\(gender.name)" :  "\(strGenre), \(gender.name)"
+        }
+        self.genreMovie.text = strGenre
+    }
+    
     func genderMovies() {
         infoMovieViewModel.genderMovies(language: Constants.RequestMovieParameters.Language)
             .subscribe(onNext: { arrayGender in
@@ -89,7 +105,7 @@ class InfoMovieViewController: UIViewController {
                 self.genreMovie.text = strGenre
                 
             }, onError: { error in
-                 print("Error:\(error)")
+                print("Error:\(error)")
             }).disposed(by: disposeBag)
     }
     

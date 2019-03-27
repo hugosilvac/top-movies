@@ -19,6 +19,7 @@
 		C13CCBE72249C3800003FB8F /* ListGenreNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CCBE62249C3800003FB8F /* ListGenreNetworkModel.swift */; };
 		C13CCBE92249C44C0003FB8F /* Mapper+GenderListExtensions+Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13CCBE82249C44C0003FB8F /* Mapper+GenderListExtensions+Business.swift */; };
 		C13E9E32224AFEA000C984E1 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13E9E31224AFEA000C984E1 /* TabBarViewController.swift */; };
+		C13E9E34224B107500C984E1 /* GenrePersistenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13E9E33224B107500C984E1 /* GenrePersistenceModel.swift */; };
 		C141ADDA22446EA4002B8E04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141ADD922446EA4002B8E04 /* AppDelegate.swift */; };
 		C141ADDF22446EA4002B8E04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C141ADDD22446EA4002B8E04 /* Main.storyboard */; };
 		C141ADE122446EAD002B8E04 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C141ADE022446EAD002B8E04 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		C13CCBE62249C3800003FB8F /* ListGenreNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGenreNetworkModel.swift; sourceTree = "<group>"; };
 		C13CCBE82249C44C0003FB8F /* Mapper+GenderListExtensions+Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mapper+GenderListExtensions+Business.swift"; sourceTree = "<group>"; };
 		C13E9E31224AFEA000C984E1 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		C13E9E33224B107500C984E1 /* GenrePersistenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenrePersistenceModel.swift; sourceTree = "<group>"; };
 		C141ADD622446EA4002B8E04 /* topmovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = topmovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C141ADD922446EA4002B8E04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C141ADDE22446EA4002B8E04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				C14CB33B224828140066BC78 /* MoviePersistenceModel.swift */,
+				C13E9E33224B107500C984E1 /* GenrePersistenceModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -797,6 +800,7 @@
 				C13CCBDF2249B99D0003FB8F /* GenreNetworkWorker.swift in Sources */,
 				C16A5F6D2245C42F00D4CE38 /* InfoRequestNetworkModel.swift in Sources */,
 				C16A5F762245C91F00D4CE38 /* Movie.swift in Sources */,
+				C13E9E34224B107500C984E1 /* GenrePersistenceModel.swift in Sources */,
 				C141AE1B224474D2002B8E04 /* ExtensionApiObservableType.swift in Sources */,
 				C16A5F802245D29D00D4CE38 /* MovieBusinessWorker.swift in Sources */,
 				C13E9E32224AFEA000C984E1 /* TabBarViewController.swift in Sources */,

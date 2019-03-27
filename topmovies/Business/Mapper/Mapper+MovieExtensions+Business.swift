@@ -9,14 +9,19 @@
 import RealmSwift
 
 extension Movie {
-    func toPercistence() -> MoviePersistenceModel {
-        return MoviePersistenceModel(voteCount: self.voteCount, id: self.id, video: self.video, voteAverage: self.voteAverage, title: self.title, popularity: self.popularity, posterPath: self.posterPath, originalLanguage: self.originalLanguage, originalTitle: self.originalTitle, genreIds: self.arrayToList(arrayGender: self.genreIds), backdropPath: self.backdropPath, adult: self.adult, overview: self.overview, releaseDate: self.releaseDate)
+    func toPercistence(arrayGenre: [Genre] = []) -> MoviePersistenceModel {
+        
+        let moviePersistence = MoviePersistenceModel(voteCount: self.voteCount, id: self.id, video: self.video, voteAverage: self.voteAverage, title: self.title, popularity: self.popularity, posterPath: self.posterPath, originalLanguage: self.originalLanguage, originalTitle: self.originalTitle, backdropPath: self.backdropPath, adult: self.adult, overview: self.overview, releaseDate: self.releaseDate)
+        
+        moviePersistence.genre = arrayToList(arrayGender: arrayGenre)
+        
+        return moviePersistence
     }
     
-    func arrayToList(arrayGender: [Int]) -> List<Int> {
-        let genderList = List<Int>()
+    func arrayToList(arrayGender: [Genre]) -> List<GenrePersistenceModel> {
+        let genderList = List<GenrePersistenceModel>()
         for gender in arrayGender {
-            genderList.append(gender)
+            genderList.append(gender.toPersistence())
         }
         return genderList
     }
@@ -27,25 +32,27 @@ extension Collection where Element == MoviePersistenceModel {
     func toMovieList() -> [Movie] {
         var network = [Movie]()
         network.append(contentsOf: self.map({ (element) -> Movie in
-            element.toApp()
+            element.toApp(listGender: element.genre)
         }))
         return network
     }
+    
 }
 
 extension MoviePersistenceModel {
-    func toApp() -> Movie {
-        return Movie(voteCount: self.voteCount, id: self.id, video: self.video, voteAverage: self.voteAverage, title: self.title, popularity: self.popularity, posterPath: self.posterPath, originalLanguage: self.originalLanguage, originalTitle: self.originalTitle, genreIds: listToArray(listGender: self.genreIds), backdropPath: self.backdropPath, adult: self.adult, overview: self.overview, releaseDate: self.releaseDate)
+    func toApp(listGender: List<GenrePersistenceModel> = List<GenrePersistenceModel>()) -> Movie {
+        let movie = Movie(voteCount: self.voteCount, id: self.id, video: self.video, voteAverage: self.voteAverage, title: self.title, popularity: self.popularity, posterPath: self.posterPath, originalLanguage: self.originalLanguage, originalTitle: self.originalTitle, genreIds: [], backdropPath: self.backdropPath, adult: self.adult, overview: self.overview, releaseDate: self.releaseDate)
+        movie.genreObject = listToArray(listGender: listGender)
+        return movie
     }
     
-    func listToArray(listGender: List<Int>) -> [Int] {
-        var arrayGender = [Int]()
+    func listToArray(listGender: List<GenrePersistenceModel>) -> [Genre] {
+        var arrayGenre = [Genre]()
         for gender in listGender {
-            arrayGender.append(gender)
+            arrayGenre.append(gender.toApp())
         }
-        return arrayGender
+        return arrayGenre
     }
-    
 }
 
 extension MovieNetworkModel {

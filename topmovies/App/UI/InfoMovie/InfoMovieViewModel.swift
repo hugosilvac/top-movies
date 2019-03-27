@@ -13,12 +13,12 @@ class InfoMovieViewModel {
     private let movieWorker = MovieBusinesskWorker()
     private let genreWorker = GenreBusinessWorker()
     
-    func isFavorite(id: Int) -> Bool{
-        return movieWorker.isFavorite(id: id)
+    func getMovie(id: Int) -> Movie? {
+        return movieWorker.getMovie(id: id)
     }
     
     func saveMovie(movie: Movie, arrayGenre: [Genre]) -> Bool {
-        return movieWorker.saveMovie(movie: movie)
+        return movieWorker.saveMovie(movie: movie, arrayGenre: arrayGenre)
     }
     
     func deleteMovie(movie: Movie) -> Bool {

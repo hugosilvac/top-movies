@@ -10,8 +10,8 @@ import RxSwift
 
 public protocol MovieBusinessContract {
     func popularMovies(page: Int, language: String) -> Observable<[Movie]>
-    func saveMovie(movie: Movie) -> Bool
+    func saveMovie(movie: Movie, arrayGenre: [Genre]) -> Bool
     func deleteMovie(movie: Movie) -> Bool
-    func isFavorite(id: Int) -> Bool
     func favoriteMovies() -> Observable<[Movie]>
+    func getMovie(id: Int) -> Movie?
 }
