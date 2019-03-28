@@ -6,16 +6,24 @@
 	Para iniciar a aplicação é necessário entrar no terminar ir ao diretório do projeto e digitar o comando: 
 
 		pod install
+---
 
 ## Desenvolvimento
 
-	O projeto foi feito em MVVM e foi divido em algumas camadas, cada uma com sua responsabilidade 
-e com a função de deixar o projeto desacoplado. As camadas são : App, Business , Network e Persistence
+	O projeto foi feito em MVVM e foi divido em algumas camadas.
+	Cada uma com sua responsabilidade e com a função de deixar o projeto desacoplado. 
+	As camadas são : App, Business , Network e Persistence
+
+---
 
 ### App
 	
-	Nessa camada esta a parte de configuração básica do app, UIViewController, UIViewModel, 
-Storyboard, Celulas e Views. É nessa camada que as informações são mostradas para o usuário.
+	Nessa camada esta a parte de configuração básica do app.
+	 - UIViewController;
+	 - UIViewModel
+	 - Storyboard
+	 - Celulas 
+	 - Views 
 
 ### Business
 	
